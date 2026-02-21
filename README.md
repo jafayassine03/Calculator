@@ -1,19 +1,40 @@
 Python Terminal Calculator
 
-A simple terminal-based calculator written in Python. This program allows the user to perform basic arithmetic operations such as addition, subtraction, multiplication, and division. It keeps running until the user decides to exit.
+This is a simple calculator that runs in the terminal.
+I built this project while practicing Python basics like loops, conditionals, and user input handling.
 
-Features
+The program lets you perform basic arithmetic operations and keeps running until you choose to exit.
 
-Addition (+)
+What it can do
 
-Subtraction (-)
+Add two numbers
 
-Multiplication (*)
+Subtract two numbers
 
-Division (/)
+Multiply two numbers
 
-Looping menu to perform multiple calculations
+Divide two numbers
 
-Input validation for menu choices
+Keep running in a loop so you can calculate multiple times
 
-Option to exit the program gracefully
+Handle invalid menu inputs
+
+Exit the program cleanly
+
+Why I made this
+
+I created this project to practice:
+
+while loops
+
+if/elif conditions
+
+Error handling with try/except
+
+Working with user input
+
+It’s a small project, but it helped me understand how to structure a simple CLI program.
+
+License
+
+Totally free to use! Play around with it and make it your own 😄
