@@ -1,32 +1,48 @@
 while True:
-    print("\nchoose the oepration you want to perform")
-    print("1 for addition (+) ")
-    print("2 for subtraction (-)")
-    print("3 for division (/)")
-    print("4 for multiplication (*)")
-    print("5 to exit")
+    print("\n--- Calculator ---")
+    print("1) Add")
+    print("2) Subtract")
+    print("3) Divide")
+    print("4) Multiply")
+    print("5) Exit")
 
-    Ch =int(input("your choice: "))
-        
-    if Ch < 1 or Ch > 5:
-        print("invalid choice")
-    else:
+    try:
+        choice = int(input("Choose an option (1-5): "))
+    except ValueError:
+        print("Please enter a number between 1 and 5.")
+        continue
 
-        a = float(input("input your first number: "))
-        b = float(input("input your second number: "))
+    if choice == 5:
+        print("Goodbye 👋")
+        break
 
-        if Ch  == 1:
-                print("Result: ", a+b)
-        elif Ch == 2:
-                print("Result: ", a-b)
-        elif Ch == 3:
-                print("Result: ", a/b)
-        elif Ch == 4:
-                print("Result: ", a*b)
-        elif Ch == 5:
-                print("Goodbye:" )
-   
-    again = input("Do you want to calculate again? (y/n): ")
-    if again != 'y' and again != 'Y':
-        print("Goodbye!")
+    if choice not in [1, 2, 3, 4]:
+        print("Invalid choice. Try again.")
+        continue
+
+    try:
+        a = float(input("Enter first number: "))
+        b = float(input("Enter second number: "))
+    except ValueError:
+        print("Numbers only please.")
+        continue
+
+    if choice == 1:
+        print("Result:", a + b)
+
+    elif choice == 2:
+        print("Result:", a - b)
+
+    elif choice == 3:
+        if b == 0:
+            print("You can't divide by zero.")
+        else:
+            print("Result:", a / b)
+
+    elif choice == 4:
+        print("Result:", a * b)
+
+    again = input("Do you want to calculate again? (y/n): ").lower()
+    if again != "y":
+        print("Alright, see you next time.")
         break
