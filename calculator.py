@@ -5,19 +5,20 @@ while True:
     print("3) Divide")
     print("4) Multiply")
     print("5) Power")
-    print("6) Exit")
+    print("6) Modulo")
+    print("7) Exit")
 
     try:
-        choice = int(input("Choose an option (1-6): "))
+        choice = int(input("Choose an option (1-7): "))
     except ValueError:
-        print("Please enter a number between 1 and 6.")
+        print("Please enter a number between 1 and 7.")
         continue
 
-    if choice == 6:
+    if choice == 7:
         print("Goodbye 👋")
         break
 
-    if choice not in [1, 2, 3, 4, 5]:
+    if choice not in [1, 2, 3, 4, 5, 6]:
         print("Invalid choice. Try again.")
         continue
 
@@ -46,7 +47,13 @@ while True:
     elif choice == 5:
         print("Result:", a ** b)
 
+    elif choice == 6:
+        if b == 0:
+            print("You can't modulo by zero.")
+        else:
+            print("Result:", a % b)
+
     again = input("Do you want to calculate again? (y/n): ").lower()
     if again != "y":
         print("Alright, see you next time.")
-        breaks
+        break
